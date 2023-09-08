@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'BatmanForeverAlternate', sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+html{
+    height: 100%;
+}
+body{
+    background-color:$black;
+    @extend %flex-columna;
+    min-height: 100%;
+}
+footer{
+    margin-top: auto;
+}
+a{
+    text-decoration: none!important;
+}
+a:hover{
+    color:map-get($titulos,co);
+}
+ul{
+    list-style: none;
+}
+.tituloh1{
+    text-align: map-get($titulos,centrado);
+    font-size: map-get($titulos,tamaño);
+    font-weight: map-get($titulos,tamaño-espacio);
+    background-color: map-get($titulos,color-fondo);
+    border-radius: map-get($titulos,radio);
+    padding: map-get($titulos,pad);
+    font-family: map-get($titulos,FF);
+    color: map-get($titulos, co);
+    text-shadow: map-get($titulos,TS);
+    -webkit-text-stroke:map-get($titulos,sombreado);
+    @include breakpoint(sm){
+      font-size: nth($FZ-VW,8);
+    }
+  }
+.tituloh2{
+  text-align: map-get($titulos,centrado);
+  font-size: map-get($titulos,tamaño);
+  font-weight: map-get($titulos,tamaño-espacio);
+  background-color: map-get($titulos,color-fondo);
+  border-radius: map-get($titulos,radio);
+  padding: map-get($titulos,pad);
+  font-family: map-get($titulos,FF);
+  color: map-get($titulos, co);
+  text-shadow: map-get($titulos,TS);
+  -webkit-text-stroke:map-get($titulos,sombreado);
+  @include breakpoint(sm){
+    font-size: nth($FZ-VW,9);
+  }
+    @include breakpoint(xs){
+    font-size: nth($FZ-VW,8);
+  }
+}
+.tituloh3b, p{
+    color: map-get($titulos,co);
+  }
+.tituloh3{
+  color: map-get($titulos,co);
+  text-shadow: map-get($titulos,TS);
+  -webkit-text-stroke: map-get($titulos,sombreado);
+}
+p{
+  @include breakpoint(xs){
+    font-size: nth($FZ-VW,10);
+  }
+}

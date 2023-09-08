@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Venta de componentes y PCs armadas, servicios de mantenimiento, actualización y arreglo. Encuentra todo lo que necesitas para mejorar tu equipo y mantenerlo en óptimas condiciones.">
+    <meta name="keywords" content="venta de componentes, PCs armadas, servicios de mantenimiento, actualización de PCs, arreglo de equipos, hardware, software">
+    <meta name="author" content="TenploGaming">
+    <meta name="language" content="es">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>TemploGaming</title>
+    <link rel="shortcut icon" href="../img/favicon.jpg.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/batman-forever" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <ul class="ul">
+            <li class="ul__element logo_e">
+                <a class="ul__a" href="../index.html">
+                    <img class="logo" src="../img/logo.png" alt="logo de la empresa">
+                </a>
+            </li>
+            <li class="ul__element ul__element--search">
+                <input class="buscador" type="search" placeholder="Buscá tu equipo aqui....">
+                <img class="buscador_i" src="../img/icons8-búsqueda-30-2.png" alt="buscador">
+            </li>
+            <li class="ul__element sesion">
+                <button type="button" class="btn boton" data-toggle="modal" data-target="#exampleModalCenter">Iniciar Sesión</button>
+  
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered"></div>
+                  <div class="login-box">
+                      <h2 >¡Bienvenidos!</h2>
+                      <form>
+                          <div class="user-box">
+                              <input type="text" name="" required="">
+                              <label>Usuario</label>
+                          </div>
+                          <div class="user-box">
+                              <input type="password" name="" required="">
+                              <label>Contraseña</label>
+                          </div>
+                          <p>No tenes cuenta?  <a href="#">Registrate</a></p>
+                          <p>te olvidaste la contraseña?  <a href="#">Recuperarla</a></p>
+                          <a class="ingre" href="../index.html">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              Ingresar
+                          </a>
+                      </form>
+                  </div>
+                </div>
+            </li>
+            <li id="contenedor_toggle">
+                <div class="toggle"></div>
+            </li>
+        </ul>
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a class="nav__a" href="../paginas/productos.html">Productos</a></li>
+                <li class="nav__li"><a class="nav__a" href="../paginas/contacto.html">Contacto</a></li>
+                <li class="nav__li"><a class="nav__a" href="../paginas/servicios.html">Servicios</a></li>
+                <li class="nav__li"><a class="nav__a" href="../paginas/nosotros.html">Nosotros</a></li>
+                <li>
+                    <div class="contedor-carrito">
+                        <div class="conteneder-carrito-icono">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke-width="1.5" 
+                            stroke="currentColor" 
+                            class="icon-carrito">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>
+                              
+                            <div class="count-productos">
+                                <span id="contador-productos " class="contador-productos">0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contenedor-cards-productos hidden-card">
+                            <div class="row-producto">
+                        </div>
+                     </div>
+                </li>
+            </ul>
+            <div class="pos-f-t hamburgesa">
+                <nav class="hamburgesa__fondo">
+                    <button class="hamburgesa__fondo__boton" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFJJREFUSEtjZKAxYKSx+QyjFhAMYfoHkfhf5v8EnYVHwUvmvyiOxvABzS2gxPXY9NI/DmjuA5rHAc0toHkQDX0LaB4HNLdg6MfBqA/QQ4DmpSkAkicYGYY6vRsAAAAASUVORK5CYII=" />
+                    </button>
+                </nav>
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <ul class="hamburgesa__nav">
+                        <li class="hamburgesa__nav__li">
+                            <a class="hamburgesa__nav__li__a" href="./productos.html">Producto </a>
+                        </li>
+                        <li class=" hamburgesa__nav__li">
+                            <a class=" hamburgesa__nav__li__a" href="./servicios.html">servicios</a>
+                        </li>
+                        <li class=" hamburgesa__nav__li">
+                            <a class=" hamburgesa__nav__li__a" href="./contacto.html">contacto</a>
+                        </li>
+                        <li class=" hamburgesa__nav__li">
+                            <a class=" hamburgesa__nav__li__a" href="./nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="container_c">
+        <h1 class="tituloh1">Sobre Nosotros</h1>
+        <article class="art">
+                    <h2 class="tituloh2">¡Bienvenido a nuestra tienda!</h2>
+                
+                    <p class="modo_claro">
+                        En TemploGaming, nos apasiona el mundo de la tecnología y nos enorgullece ofrecer una amplia gama de productos de alta calidad para satisfacer todas tus necesidades informáticas. Desde computadoras preensambladas hasta componentes individuales, nuestro objetivo es proporcionar la mejor experiencia de compra a nuestros clientes. <br>
+                        <br>
+                        Nuestra misión es brindar soluciones tecnológicas confiables y accesibles que impulsen el potencial de nuestros clientes. Nos esforzamos por mantenernos actualizados con las últimas tendencias y avances en el campo de la informática, para poder ofrecer productos innovadores y de vanguardia. <br>
+                        <br>
+                        En TemploGaming, valoramos la calidad, la confiabilidad y la excelencia en el servicio al cliente. Trabajamos con los principales fabricantes y proveedores de la industria para asegurarnos de ofrecer productos de primera calidad que cumplan con los más altos estándares. Nuestro equipo de expertos en tecnología está aquí para brindarte asesoramiento personalizado y resolver todas tus dudas. <br>
+                        <br>
+                        Además de nuestra amplia selección de productos, también ofrecemos servicios de configuración, ensamblaje y soporte técnico para garantizar que obtengas el máximo rendimiento de tu inversión. Nos esforzamos por hacer que tu experiencia de compra sea fluida, segura y satisfactoria desde el momento en que visitas nuestro sitio web hasta que recibes tu producto en la puerta de tu casa. <br>
+                        <br>
+                        Agradecemos tu confianza en TemploGaming. Nuestro objetivo es convertirnos en tu socio tecnológico de confianza, brindándote soluciones informáticas de calidad que satisfagan tus necesidades tanto en el ámbito personal como profesional. <br>
+                        <br>
+                        ¡Explora nuestra tienda en línea y descubre la última tecnología en computadoras y componentes! Si tienes alguna pregunta o necesitas ayuda, no dudes en ponerte en contacto con nuestro equipo de atención al cliente. Estaremos encantados de ayudarte en tu búsqueda de la tecnología perfecta para ti. <br>
+                        <br>
+                        ¡Gracias por elegirnos! <br>
+                        <br>
+                        TemploGaming
+                    </p>
+        </article>
+        <article class="art">
+
+                <h2 class="tituloh2">POLÍTICA DE PRIVACIDAD</h2>
+                <p class="modo_claro">El presente Política de Privacidad establece los términos en que maldito hard usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p>
+                <h3 class="titulosecundario">Información que es recogida</h3>
+                <p class="modo_claro">Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p>
+                <h3 class="titulosecundario">Uso de la información recogida</h3>
+                <p class="modo_claro">Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios.  Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p>
+                <h3 class="titulosecundario">Cookies</h3>
+                <p class="modo_claro">Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.
+        
+                    Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo las cookies ayudan a proporcionar un mejor servicio de los sitios web, estás no dan acceso a información de su ordenador ni de usted, a menos de que usted así lo quiera y la proporcione directamente noticias. Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p>
+                <h3 class="titulosecundario">Enlaces a Terceros</h3>
+                <p class="modo_claro">Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.</p>
+                <h3 class="titulosecundario">Control de su informacion personal</h3>
+                <p class="modo_claro">En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.  Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico.  En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.
+        
+                    Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.
+                    
+                    maldito hard Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>
+  
+        </article>
+        <article class="art">
+                <h2 class="tituloh2">Garantía y devoluciones</h2>
+                <p class="modo_claro">Los motivos por los cuales se puede gestionar el cambio o la devolución de un producto son los siguientes: <br>
+                    <br>
+                    • Producto defectuoso antes de usarse: el producto recibido posee alguna falla o rotura. <br>
+                    <br>
+                    • El producto recibido es diferente al que solicitó. <br>
+                    <br>
+                    En caso que un cliente reciba un producto en malas condiciones de empaquetado (roturas o abierto), el cliente tiene 48 hs para darnos aviso de lo ocurrido.</p>
+                    <h3 class="titulosecundario">Opciones de cambio</h3>
+                    <p class="modo_claro">-Para cambiar un producto SIN defectos (producto diferente al que se solicitó): Si el producto es nuevo y está sin defectos, el usuario tendrá hasta 30 días consecutivos, a partir de la fecha de recepción, para poder sustituirlo por otro siempre y cuando conserve las mismas condiciones en que fue recibido (en el embalaje original, sin indicios de uso, con la factura / ticket original, manual y todos los accesorios si correspondiera). Los gastos del flete serán gratuitos para el usuario, cuando se trate del primer cambio realizado. En caso de que sea necesario uno nuevamente, los gastos de flete serán a cargo del usuario. <br>
+                    <br>
+                    Para cambiar un producto CON defectos: En el caso de que el producto esté con defectos propios de fabricación, tendrá 180 días, a partir de la fecha en que recibió el pedido para hacer uso de la garantía. El plazo y forma de utilización están mencionados en las condiciones de Garantía que acompañan al producto, es indispensable que mantenga intacto el sello de garantía (de tenerlo) y que el producto no presente signos de manipulación por un servicio técnico que no sea el oficial o por el usuario mismo para su reparación o diagnóstico.</p>
+                    <h3 class="titulosecundario">Devolucion de un producto</h3>
+                    <p class="modo_claro">Conforme lo establece el art. 34 de la ley 24.240 de Defensa del Consumidor, en concordancia con el artículo 1.111 y 1.112 del Código Civil y Comercial de la República Argentina el usuario tendrá también 10 días contados a partir de que se entregue el bien o se celebre el contrato para poder revocar la aceptación de la compra. Si así lo decidiera se aplica lo dispuesto por el art. 10 ter de la Ley 24.240 de Defensa del Consumidor. En tal caso, el usuario deberá reintegrar el producto comunicándose con el sitio para solicitar el retiro del producto, el cual deberá estar sin uso y en perfecto estado, con sus etiquetas, envoltorios y todos los accesorios adicionales que pudieren corresponde <br>
+                    <br>
+                    ARREPENTIMIENTO DE COMPRA: Por el plazo de hasta 10 días corridos, el usuario puede arrepentirse de la compra, dicho plazo corre a partir de la fecha de recepción del producto. El mismo debe encontrarse en las mismas condiciones en que fue recibido (en el embalaje original, sin ser abierto, sin indicios de uso, con la factura / ticket original, manual y todos los accesorios si correspondiera). Maldito Hard se hace cargo del costo de la devolución y se procede a la devolución al cliente del dinero mediante el mismo medio que fue cobrado, emitiendo nota de crédito.</p>
+        </article>
+    </main>
+
+    <footer class="pie">
+        <div class="pie__div">
+            <h3 class="pie_format">Nuestras Redes</h3>
+            <a class="pie__a" href="https://www.instagram.com/sergiowazzap/" target="_blank">Instagram</a>
+            <a class="pie__a"
+                href="https://www.facebook.com/LilRayder/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"
+                target="_blank">Facebook</a>
+            <a class="pie__a" href="https://twitter.com/Rayder_Chiquito" target="_blank">Twitter</a>
+        </div>
+        <div class="pie__div">
+            <h3 class="pie_format">Contacto</h3>
+            <p class="pie_format">Telefono:+54-2235639109</p>
+            <p class="pie_format">Correos:sergio.matias.guaymas@gmail.com</p>
+        </div>
+        <div class="pie__div">
+            <h3 class="pie_format">Encuentranos en </h3>
+            <p class="pie_format"> P sherman calle wallaby 24 sidney</p>
+            <p class="pie_format">Lunes a viernes 10:00hs - 18:00hs</p>
+            <p class="pie_format">sabado 10:00hs - 14:00hs</p>
+            <P class="pie_format">Domingos y feriados cerrado</P>
+        </div>
+        <iframe class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25151.58067882488!2d-57.5633272286369!3d-38.00168304185088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d94d19d34209%3A0xdd9670804bfed126!2sMar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1680188257545!5m2!1ses!2sar"
+            width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="/js/pokemon.js"></script>
+    <script src="/js/agregarcarrito.js"></script>
+    <script src="/js/toggle.js"></script>        
+</body>

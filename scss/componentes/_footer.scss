@@ -1,0 +1,33 @@
+.pie{
+    background-color: $bg-logo;
+    @extend %flex-around;
+    overflow: hidden;
+    &__div{
+        @extend %flex-columna-centrada;
+        @include breakpoint(lg){
+            width: 100%;
+            border-top: 1px solid $black;
+        }
+    }
+    &__a{
+        padding: 15px;
+        color: $color-pt;
+        font-family: Arial, Helvetica, sans-serif;
+        &:hover{
+            color: $color-letra;
+        }
+    }
+    &_format{
+        color: map-get($titulos,co);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+    }
+    .mapa{
+        margin: 1em;
+    }
+    @include breakpoint(lg){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

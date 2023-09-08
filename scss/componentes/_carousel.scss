@@ -1,0 +1,46 @@
+.carousel-indicators{
+  @include breakpoint(sm){
+          display: none;
+        }
+ }
+.carousel-indicators li{
+    background-color: $black;
+  }
+.carousel-indicators .active {
+    background-color: $color-letra;
+  }
+
+
+  .ocultart{
+    @include breakpoint(xl){
+      display: none;
+    }
+  }
+  .ocultar{
+    @include breakpoint(md){
+      display: none;
+    }
+  }
+
+
+
+  // ------------------- carrusel de servicios
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .carousel-caption h3{
+    font-size: nth($FZ-VW,5);
+    -webkit-text-stroke: 2px $negrita;
+    @include breakpoint(sm){
+      font-size: 20px;
+    }
+  }
+  .carousel-caption p{
+    font-size: nth($FZ-VW, 3);
+    -webkit-text-stroke: 0.8px $negrita;
+  }
+

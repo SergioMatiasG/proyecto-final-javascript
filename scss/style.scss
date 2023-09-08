@@ -1,0 +1,17 @@
+@import "./base/media-queries";
+@import "./base/maps";
+@import "./base/variables";
+@import "./base/extends";
+@import "./base/base";
+
+
+
+
+@import "./componentes/header";
+@import "./componentes/hamburgesa";
+@import"./componentes/inicio";
+@import "./componentes/seccionprimera";
+@import "./componentes/seccionsegunda";
+@import "./componentes/cards";
+@import "./componentes/carousel";
+@import "./componentes/footer";

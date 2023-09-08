@@ -1,0 +1,32 @@
+%flex-columna{
+    display: flex;
+    flex-direction: column;
+}
+%flex-centrado{
+    display: flex;
+    align-items: center;
+}
+%flex-around{
+    display: flex;
+    justify-content: space-around;
+}
+%flex-just-centrado{
+    display: flex;
+    justify-content: center;
+}
+%flex-columna-centrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+%flex-columna-centrada2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+%flex-columna-alineada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

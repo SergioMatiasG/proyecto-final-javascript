@@ -1,0 +1,35 @@
+
+.carta{
+    cursor: pointer;
+    box-sizing: border-box;
+
+     &__cuerpo{
+        @extend%flex-columna-centrada2;
+        &__titulo{
+            font-size: 1.25rem;
+            color: map-get($titulos,co);
+            text-shadow: map-get($titulos,TS);
+            -webkit-text-stroke: map-get($titulos,sombreado);
+        }
+        &__texto{
+           color: $black;
+           text-align: center;
+           text-shadow: 1px 2px 0px $color-letra;
+        }
+        &__boton{
+            color: $black;
+            background-color: $color-letra;
+            border-color: $black solid 1px;
+            &:hover{
+                color: $color-pt;
+                background-color: $black;
+                border-color: $color-letra;
+            }
+ 
+       }
+}
+}
+.cimg{
+    width: 300px;
+    height: 300px;
+}
