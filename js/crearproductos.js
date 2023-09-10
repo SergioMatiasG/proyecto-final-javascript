@@ -5,14 +5,14 @@ const ordenarCards = document.querySelector("#ordenar")
 const crearCartas = (array) => {
     const cards = array.reduce((acc,element) => {
         return acc + `
-        <div class="card carta ecartas" style="width: 20rem" id = id_card ${element.id}">
+        <div class="card carta ecartas" style="width: 20rem" id =${element.id}">
                 <figure class="cimgc">
                 <img class="card-img-top" src=${element.imagen} alt=${element.nombre}>
                 <div class="card-body carta__cuerpo">
                   <h2 class="carta__cuerpo__titulo">${element.nombre}</h2>
                   <p class="card-text carta__cuerpo__texto">${element.descripcion}</p>
                   <p class="card-text carta__cuerpo__texto">$ ${element.precio}</p>
-                  <button class="btn carta__cuerpo__boton agregar_carrito" id="button--${element.id}" >Agregar al carrito</button>
+                  <button class="btn carta__cuerpo__boton agregar_carrito" id="${element.id}" >Agregar al carrito</button>
                 </div>
             </div>
         `

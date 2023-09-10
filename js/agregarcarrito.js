@@ -7,63 +7,55 @@ const rowPorducto = document.querySelector(".row-producto")
 
 
 
-let carritoGuardado =[]
+let carritoGuardado = JSON.parse(localStorage.getItem('ProductosC')) || []
+let datosObtenidos = []
 
+fetch (`https://apimocha.com/hardwareapi/posts`)
+    .then(respuesta => respuesta.json())
+    .then(data => {
+        datosObtenidos.push(...data)
+        console.log(datosObtenidos)
+    })
+    .catch((error) => {
+        console.error("Error al obtener datos desde el servidor:", error);
+    });
 
-async function obtenerProductoPorID(id) {
-    try {
-        const response = await fetch(`https://apimocha.com/hardwareapi/posts${id}`)
-        if (!response.ok) {
-            throw new Error('Error al obtener información del producto desde la API')
-        }
-        const producto = await response.json()
-        return producto
-    } catch (error) {
-        console.error(error)
-    }
-}
-
-document.body.onclick = (async (e) => {
+document.body.onclick = ( e => {
     if (e.target.classList.contains('agregar_carrito')) {
-        const id = e.target.id.slice(8)
+        const id = e.target.id
+        const producto = datosObtenidos.find((item) => item.id === id)
+        const productoExistente = carritoGuardado.find((item) => item.id === producto.id);
 
-        try {
-            const producto = await obtenerProductoPorID(id)
-
-            const productoExistente = carritoGuardado.find((item) => item.id === producto.id);
-
-            if (productoExistente) {
-                productoExistente.cantidad += 1
-            } else {
-                producto.cantidad = 1
-                carritoGuardado.push(producto)
-            }
-            localStorage.setItem('ProductosC', JSON.stringify(carritoGuardado))
-
-            renderizarCarrito()
-            actualizarContadorCarrito()
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                },
-            })
-
-            Toast.fire({
-                iconColor: '#17FD03',
-                icon: 'success',
-                title: 'Agregado al carrito',
-                color: '#17FD03',
-                background: '#000',
-            })
-        } catch (error) {
-            console.error('Error al agregar el producto al carrito:', error)
+        if (productoExistente) {
+            productoExistente.cantidad += 1
+        } else {
+            producto.cantidad = 1
+            carritoGuardado.push(producto)
         }
+        localStorage.setItem('ProductosC', JSON.stringify(carritoGuardado))
+
+        renderizarCarrito()
+        actualizarContadorCarrito()
+        
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            },
+        })
+
+        Toast.fire({
+            iconColor: '#17FD03',
+            icon: 'success',
+            title: 'Agregado al carrito',
+            color: '#17FD03',
+            background: '#000',
+        })
     }
 })
     
@@ -89,31 +81,33 @@ const btnCarrito = document.querySelector(".conteneder-carrito-icono")
 
 document.body.addEventListener("click", (e) => {
         if (e.target.classList.contains("icon-close")) {
-            const closeBtn = e.target;
+            const closeBtn = e.target
             const productId = closeBtn.id.replace("close-", "")
-
-            const productoExistente = carritoGuardado.find(item => item.id === Number(productId))
-             if (productoExistente) {
-                if (productoExistente.cantidad > 1) {
-                    productoExistente.cantidad -= 1
+            const productoGuardado = carritoGuardado.find(item => item.id === productId)
+            console.log(productoGuardado)
+             if (productoGuardado ) {
+                if (productoGuardado .cantidad > 1) {
+                    productoGuardado .cantidad -= 1
                 } else {
-                    const index = carritoGuardado.indexOf(productoExistente)
+                    const index = carritoGuardado.indexOf(productoGuardado)
                     if (index !== -1) {
                         carritoGuardado.splice(index, 1)
                     }
                 }
                 localStorage.setItem("ProductosC", JSON.stringify(carritoGuardado))
-                renderizarCarrito();
+                renderizarCarrito()
+                actualizarContadorCarrito()
             }
         }
         if (e.target.classList.contains("icon-agregar")) {
             const closeBtn = e.target;
             const productId = closeBtn.id.replace("agregar-", "") 
-            const productoExistente = carritoGuardado.find(item => item.id === Number(productId))
+            const productoExistente = carritoGuardado.find(item => item.id === productId)
             if (productoExistente) {
                 productoExistente.cantidad += 1
                 localStorage.setItem("ProductosC", JSON.stringify(carritoGuardado))
-                renderizarCarrito();
+                renderizarCarrito()
+                actualizarContadorCarrito()
             }
         }
     });
@@ -131,8 +125,8 @@ document.body.addEventListener("click", (e) => {
                     <img class="imgcarrito" src="${producto.imagen}" alt="${producto.nombre}">   
                  </div>
                 <div class="info-card-producto">
-                        <span class="cantidad-producto-carrito">Cantidad : ${producto.cantidad}</span>
                         <p class="titulo-producto-carrito">${producto.nombre}</p>
+                        <span class="cantidad-producto-carrito">Cantidad : ${producto.cantidad}</span>
                         <span class="precio-producto-carrito">Precio : ${producto.precio}</span>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -213,3 +207,4 @@ document.body.addEventListener("click", (e) => {
         }
     
     }
+    actualizarContadorCarrito()
